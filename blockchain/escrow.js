@@ -21,8 +21,8 @@ export const releaseEscrowPayment = async (fromAddress, receiverAddress) => {
 };
 
 // Simulate full payment process
-export const makePayment = async ({ flight, hostel, amount }) => {
-  console.log('Starting payment for:', flight, hostel, 'Amount:', amount);
+export const makePayment = async ({ flight, hotel, amount }) => {
+  console.log('Starting payment for:', flight, hotel, 'Amount:', amount);
 
   // Step 1: Deposit to escrow
   const deposit = await depositToEscrow('user_address', 'receiver_address', amount);

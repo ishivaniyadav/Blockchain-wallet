@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { View } from 'react-native';
-import HostelBooking from '../components/HostelBooking';
-import EscrowStatus from '../components/EscrowStatus';
+import EscrowStatus from './EscrowStatus';
+import HotelBooking from './HotelBooking';
 
-export default function HostelScreen() {
-  const [hostelData, setHostelData] = useState(null);
+export default function HotelScreen() {
+  const [hotelData, setHotelData] = useState(null);
   const [paymentStatus, setPaymentStatus] = useState(null);
 
   const handleNext = (data) => {
-    setHostelData(data);
+    setHotelData(data);
     // For demo, automatically show "completed" status
     setPaymentStatus('completed');
   };
@@ -19,7 +19,7 @@ export default function HostelScreen() {
 
   return (
     <View>
-      <HostelBooking onNext={handleNext} />
+      <HotelBooking onNext={handleNext} />
     </View>
   );
 }
